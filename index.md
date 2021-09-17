@@ -1,5 +1,3 @@
-## Elijah Sorensen
-
 Finally, I can use the custom domain I purchased in my name to host something **worthwhile**
 
 ### Projects
