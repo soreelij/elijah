@@ -1,0 +1,97 @@
+/* Navigation Bar Styling */
+
+.topnav {
+    font-weight: bold;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.topnav li {
+    float: left;
+}
+
+.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav li a:hover {
+    color: #dddddd;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.content {
+    font-size: 2vw;
+    margin-top: 10%;
+}
+
+.content p {
+    font-size: 1.8vw;
+}
+
+.content .subtext {
+    font-size: 1.4vw;
+}
+
+.module {
+    margin-left: 15px;
+}
+
+.module h4 {
+    font-weight: 500;
+    line-height: 0px;
+}
+
+.project-attributes {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 1.4vw;
+}
+
+.module .links a {
+    display: inline-block;
+    color: white;
+    font-size: 1.2vw;
+    text-decoration: none;
+}
+
+.module .links a:hover {
+    color: #dddddd;
+}
+
+.footernav {
+    font-weight: bold;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.footernav li {
+    display: inline-block;
+}
+
+.footernav li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.footernav li a:hover {
+    color: #dddddd;
+}
+
+footer {
+    font-size: 15px;
+}
