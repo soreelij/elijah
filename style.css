@@ -41,6 +41,10 @@ body {
     font-size: 1.8vw;
 }
 
+.content a {
+    color: white;
+}
+
 .content .subtext {
     font-size: 1.4vw;
 }
