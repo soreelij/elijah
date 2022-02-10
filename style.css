@@ -47,6 +47,7 @@ body {
 
 .module {
     margin-left: 15px;
+    width: 60vw;
 }
 
 .module h4 {
@@ -54,9 +55,9 @@ body {
     line-height: 0px;
 }
 
-.project-attributes {
+.module .project-attributes {
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 1.4vw;
+    font-size: 1.3vw;
 }
 
 .module .links a {
