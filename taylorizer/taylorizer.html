@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taylorizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="main-container center">
+    <div class="title">
+        <h2>Taylorizer</h2>
+        <p class="subtext">generate Taylor Swift lyrics from an AI using GPT-2</p>
+    </div>
+    <div style="display: inline-block; padding-bottom: 10px;">
+        <label>
+            <strong>Starting Lyric:</strong>
+            <input id="inputLyrics" type="text"/>
+        </label>
+    </div>
+    <div style="padding: 15px">
+        <button id="btnSubmit">Taylorize!</button>
+    </div>
+    <p id="result"></p>
+    <p id="directions">
+        let the computer satisfy your desire for more taylor content
+        <br />
+        input a lyric and watch the magic happen
+        <br />
+        if you get a weird result, try again...
+        <br />
+        it's not as smart as she is
+    </p>
+    <img src="taylor-head.png" class="taylor-head">
+</div>
+</body>
+<script>
+    document.getElementById("btnSubmit").onclick = submit;
+
+    function submit() {
+
+        let result = document.getElementById("result");
+
+        fadeOutEffect();
+
+        result.innerText = "Taylorizing...";
+
+        var apiUrl = "https://gpt2-nkxmmqpf7q-uw.a.run.app?length=150&temperature=1.2&top_p=0.9";
+        var startingLyric = document.getElementById("inputLyrics").value;
+
+        if (startingLyric != null) {
+            startingLyric = encode(startingLyric);
+            apiUrl += "&prefix=" + startingLyric;
+        }
+
+        console.log("getting lyrics...");
+
+        $.ajax({
+            url: apiUrl,
+            type:'GET',
+            dataType: 'json',
+            success: function(data) {
+                console.log(data);
+                result.innerText = truncate(data.text);
+            }
+        });
+    }
+
+    function encode(lyric) {
+        return lyric.replace(new RegExp(" ", "g"), "%20");
+    }
+
+    function truncate(data) {
+        if(data.lastIndexOf("\n")>0) {
+            return data.substring(0, data.lastIndexOf("\n"));
+        } else {
+            return data;
+        }
+    }
+
+    function fadeOutEffect() {
+        var fadeTarget = document.getElementById("directions");
+        var fadeEffect = setInterval(function () {
+            if (!fadeTarget.style.opacity) {
+                fadeTarget.style.opacity = 1;
+            }
+            if (fadeTarget.style.opacity > 0) {
+                fadeTarget.style.opacity -= 0.3;
+            } else {
+                clearInterval(fadeEffect);
+            }
+        }, 200);
+    }
+</script>
+</html>
