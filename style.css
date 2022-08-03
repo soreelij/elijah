@@ -67,7 +67,7 @@ body {
     display: inline-block;
     color: white;
     font-size: 1.2vw;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .module .links a:hover {
