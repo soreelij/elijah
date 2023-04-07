@@ -33,24 +33,20 @@ body {
 }
 
 .content {
-    font-size: 2vw;
     margin-top: 10%;
 }
 
 .content p {
-    font-size: 1.8vw;
 }
 
 .content a {
     color: white;
 }
 
-.content .subtext {
-    font-size: 1.4vw;
-}
+
 
 .module {
-    width: 60vw;
+/*    width: 60vw;*/
 }
 
 .module h4 {
@@ -60,13 +56,13 @@ body {
 
 .module .project-attributes {
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 1.3vw;
+/*    font-size: 1.3vw;*/
 }
 
 .module .links a {
     display: inline-block;
     color: white;
-    font-size: 1.2vw;
+/*    font-size: 1.2vw;*/
     text-decoration: underline;
 }
 
