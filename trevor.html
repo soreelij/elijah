@@ -11,20 +11,44 @@
 <body>
     <center>
         <h2>Trevor's Corner</h2>
-        <p>your fun, online stop to shorten the wait.</p>
-        <p style="color: black">i love you.</p>
-        <i>check back soon.</i>
+        <p>your online stop to shorten the wait.</p>
+        <p>june 11th, 2023—the birthday update</p>
+        <h1>Happy 21st Birthday, Trevor. 🥳</h1>
+        <p>
+            21 is a big one. So, here are 21 songs that remind me <i>of</i> you, <i>for</i> you. I love you, and I miss you. Enjoy, and make sure to listen in order.
+        </p>
         <br/>
+        <div class="frame-wrapper">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4c9ctL7ntaWvk6rxWlNjxz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
         <br/>
-        <br/>
-        <p>time until Eli gets back:</p>
+         <div class="button-wrapper">
+            <button class="confetti-button">Celebrate 🎉</button>
+        </div>
+        <p style="font-size: 10px">(click me!) ⬆️</p>
+        <p>time until Eli buys Trevor fancy alcohol for his birthday:</p>
         <h1 style="align: center;" id="demo"></h1>
-        <p style="font-size: 5px">have you found any easter eggs yet?</p>
-        <br/>
     </center>
     
-
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <script>
+    document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
+        let canvas = document.createElement("canvas");
+        canvas.width = 600;
+        canvas.height = 600;
+        let container = document.getElementsByClassName("button-wrapper")[0];
+        container.appendChild(canvas);
+
+        let confetti_button = confetti.create(canvas);
+        confetti_button({
+            particleCount: 200,
+            spread: 200,
+            startVelocity: 15,
+            scalar: 0.9,
+            ticks: 90
+        }).then(() => container.removeChild(canvas));
+    });
+
     // Set the date we're counting down to
     var countDownDate = new Date("Aug 12, 2023 00:00:00").getTime();
     

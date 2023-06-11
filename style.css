@@ -49,6 +49,45 @@ body {
     font-size: 1.4vw;
 }
 
+.confetti-button {
+    outline: none;
+    border:none;
+    cursor: pointer;
+    width:100%;
+    height: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    color: black;
+    text-align: center;
+    background: white;
+    transition: 0.5s;
+}
+.confetti-button:hover {
+    background: #e0e0e0;
+}
+.confetti-button:active {
+    background:#1da88a;
+}
+.button-wrapper {
+    position: relative;
+    width:200px;
+    height:60px;
+}
+.button-wrapper canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.frame-wrapper {
+    position: relative;
+    width:500px;
+}
+
 .module {
     width: 60vw;
 }
