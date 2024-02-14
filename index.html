@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
     <title>Home | Elijah Sorensen</title>
@@ -14,99 +15,132 @@
 
 <body>
     <div class="mt-3 col-md-8 offset-md-2 topnav">
-        <li><a class="hover-underline-animation" style="padding: 14px 0px" href="index.html">Elijah Sorensen</a></li>
+        <li><a class="hover-underline-animation" href="index.html">Elijah Sorensen</a></li>
         <li><a class="hover-underline-animation" href="#projects">Projects</a></li>
-        <!-- <li style="float: right;"><a href="skills.html">Skills</a></li>
-        <li style="float: right;"><a href="about.html">About</a></li> -->
+        <li><a class="hover-underline-animation" href="#about">About</a></li>
     </div>
-
-     <div class="mt-5">&nbsp;</div>
-
-    <div class="mt-5 col-md-8 offset-md-2">
-        <h1 class="title">Elijah Sorensen</h1>
-        <h2 class="subtitle mb-4" style="font-weight: 900;">Student Developer in <span style="color: #3E7CB6;">Boise, ID</span></h2>
-        <a href="#projects">Learn more about my projects</a>
-    </div>
-
-    <div class="mt-5">&nbsp;</div>
-    <div class="mt-5">&nbsp;</div>
-    <div class="mt-5">&nbsp;</div>
-    <div class="mt-5">&nbsp;</div>
-    <div class="mt-5">&nbsp;</div>
-    <div class="mt-5">&nbsp;</div>
-
-    <div id="projects" class="mt-5 col-md-8 offset-md-2">
-        <div class="mt-5">&nbsp;</div>
-        <h1>PROJECTS</h1>
-        <h3>Personal</h3>
-        <div>
-            <h4>Quiz FM</h4>
-            <p class="project-attributes">Swift | 2021-2022</p>
-            <p>Music quiz game for iOS that utilizes the last.fm API to generate questions based around a user's streaming habits.</p>
-        </div>
-        <div>
-            <h4>Taylorizer</h4>
-            <p class="project-attributes">Python/React Web | 2022</p>
-            <p>Allows users to interact with a GPT-2 powered machine learning model trained to write Taylor Swift songs.</p>
-            <div class="links">
-                <a href="https://www.elijahsorensen.com/taylorizer/index.html">Try it</a>
+    <div class="container">
+        <div class="row align-items-center" style="min-height: 100vh;">
+            <div class="col-sm-4">
+                <img class="rounded-circle mx-auto d-block" src="images/elijah.jpg"
+                    style="width: 300px; height: 300px; margin-bottom: 10px;">
+            </div>
+            <div class="col-lg-8">
+                <h1 class="title">Elijah Sorensen</h1>
+                <h2 class="display-6 mb-4" style="font-weight: 900;">Developer in <span style="color: #3E7CB6;">Boise,
+                        ID</span></h2>
+                <a href="#projects">Learn more about my projects</a>
             </div>
         </div>
-        <h3>University</h3>
-        <div>
-            <h4>Circuit Tracer</h4>
-            <p class="project-attributes">Java | 2021</p>
-            <p>Implementation of a search algorithm which parses a valid input .dat file representing a circuit board layout, generating a list of the best possible (shortest) trace paths that connect two circuit components on the board.</p>
-            <div class="links">
-                <a href="https://github.com/soreelij/circuit-tracer">GitHub</a>
+        <div class="row justify-content-center" style="min-height: 100vh;">
+            <div class="col-md-8">
+                <div id="projects">
+                    <div class="mt-5">&nbsp;</div>
+                    <h1 class="mb-4">PROJECTS</h1>
+                    <div>
+                        <img src="images/mixtaper.png" style="width: 100%; height: auto;" class="pb-4">
+                        <h4>Mixtaper</h4>
+                        <p class="code">Swift</p>
+                        <p>iOS graphics editor that allows users to customize and export playlist covers for use on
+                            their favorite music streaming services. Users select from a number of templates then edit
+                            fonts, colors, text, and photos with an intuitive SwiftUI interface.
+                        </p>
+                        <p>Published to the App Store, receiving 1,000+ downloads within the first week of release.</p>
+                        <div class="links mb-4">
+                            <a href="https://apps.apple.com/us/app/mixtaper/id6451324425"><img
+                                    src="images/app_store.svg"></a>
+                        </div>
+                        <br />
+                        <h4>Martingale</h4>
+                        <p class="code">Python/JavaScript</p>
+                        <p>React natural language processing web application to aid professors in grading writing
+                            assignments. Utilizes a fine-tuned RoBERTa models to grade assignments based on set
+                            criteria. Employs FAST API backend for processing requests.</p>
+                        <br />
+                        <img src="images/algorhythm header.png" style="width: 100%; height: auto;" class="pb-4">
+                        <h4>AlgoRythym</h4>
+                        <p class="code">Python/JavaScript</p>
+                        <p>React natural language processing generative AI web application. Generates conceptual album
+                            titles, covers, and track listings using natural language processing, by way of fine-tuned
+                            language and stable diffusion machine learning models. A FAST API backend processes user
+                            input within REST requests to relevant models.</p>
+                        <br />
+                        <img src="images/taylorizer.png" style="width: 100%; height: auto;" class="pb-4">
+                        <h4>Taylorizer</h4>
+                        <p class="code">Python/JavaScript</p>
+                        <p>React natural language processing generative AI web application. Allows users to interact
+                            with a GPT powered machine learning model fine-tuned to write Taylor Swift songs. Calls
+                            a Google Cloud REST API running a Docker instance of the model.</p>
+                    </div>
+                </div>
+                <div id="about" class="pt-3">
+                    <div class="mt-5">&nbsp;</div>
+                    <h1 class="mb-4">ABOUT</h1>
+                    <div class="row">
+                        <div class="col-md-6 order-md-1">
+                            <img src="images/about_1.jpeg" style="width: 100%; height: auto;" class="pb-4">
+                        </div>
+                        <div class="col-md-6 order-md-2">
+                            <h4>Hi, I'm Elijah! 👋</h4>
+                            <p>
+                                Born and raised in Idaho Falls, I'm a developer now living Boise, ID. I'm in my last
+                                semester studying Computer Science at
+                                Boise State University, with an emphasis in machine learning. Of everything I've
+                                learned, I'm
+                                most passionate about and fascinated by natural language processing. I've always loved
+                                to write,
+                                and it's amazing what we can do with a language, data science, and artificial
+                                intelligence.
+                                I'm also a member of the Boise State Honors College.
+                                <br />
+                                <br />
+                                Outside of my studies, I am an avid runner, reader, and Taylor Swift fan. My favorite
+                                era is absolutely 1989, but my top song of hers is probably Cruel Summer. That
+                                said, my music tastes extend
+                                well beyond just Taylor—I collect vinyl records and love curating music into countless
+                                playlists from a variety
+                                of artists and genres.
+                                Going to concerts is one of my most favorite things to do. Few things compare to seeing
+                                your favorite artist live.
+                                <br />
+                                <br />
+                                I love spending time with my family, friends, and boyfriend. Ask any one of them, and
+                                they'll all tell you that
+                                I'm always dreaming up a new project, from apps, to elaborate parties, to YouTube videos. 
+                                <br />
+                                <br />
+                                There are few things I love more than creating.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div>
-            <h4>Priority Queue CPU Scheduling Simulation</h4>
-            <p class="project-attributes">Java | 2021</p>
-            <p>Priority queue max heap for simulation of round-robin CPU Process scheduling. Randomly generates processes, adds them to the queue following the scheduling algorithm, and outputs simulation results.</p>
-            <div class="links">
-                <a href="https://github.com/soreelij/cpu-scheduling">GitHub</a>
-            </div>
-        </div>
-        <div>
-            <h4>Bioinformatics Using B-Trees</h4>
-            <p class="project-attributes">Java | 2021</p>
-            <p>Parses an input GeneBank file and stores its contents within a B-Tree. Accepts a DNA sequence query and searches the B-Tree, returning its frequency occurrence within the given genome. Outputs results to a machine-readable binary file or an SQL database.</p>
-            <div class="links">
-                <a href="https://github.com/soreelij/btree">GitHub</a>
-            </div>
-        </div>
-        <div>
-            <h4>myps</h4>
-            <p class="project-attributes">C | 2021</p>
-            <p>Simplified version of the ps command found on the Unix terminal. Displays current processes on the system and their respective information. Demonstrates the create/destroy design pattern, dynamic memory allocation, and file stream proecessing.</p>
-            <div class="links">
-                <a href="https://github.com/soreelij/myps/blob/main/README.md">GitHub</a>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
-        });
-    </script>
-
-    <!-- Bootstrap JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        </script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 </body>
-
 <footer style="text-align: center;">
-    <p>&copy; 2023 Elijah Sorensen</p>
+    <p>&copy; 2024 Elijah Sorensen</p>
     <div class="footernav">
         <li style><a href="https://github.com/soreelij">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/elijahmsorensen/">Linkedin</a></li>
