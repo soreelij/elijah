@@ -1,10 +1,11 @@
-/* Navigation Bar Styling */
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
+/* Navigation Bar Styling */
 .topnav {
     font-weight: bold;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
 }
 
@@ -24,113 +25,70 @@
     color: #dddddd;
 }
 
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #3E7CB6;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 body {
-    background-color: black;
+    background-color: #171C26;
     color: white;
     margin-left: 10%;
     margin-right: 10%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-family: 'Catamaran', sans-serif;
 }
 
-button {
-    outline: none;
-    border:none;
-    cursor: pointer;
-    width:100%;
-    height: 100%;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: 700;
-    font-family: 'Lato', sans-serif;
-    color: black;
-    text-align: center;
-    background: white;
-    transition: 0.5s;
+h1 {
+    font-weight: 900;
+    color: #3E7CB6;
+}
+
+.title {
+    font-size: 85px;
+}
+
+.subtitle {
+    font-size: 50px;
 }
 
 .content {
-    font-size: 2vw;
     margin-top: 10%;
 }
 
-.content p {
-    font-size: 1.8vw;
-}
-
-.content a {
+a {
     color: white;
-}
-
-.content .subtext {
-    font-size: 1.4vw;
-}
-
-.content-center {
-    text-align: center;
-}
-
-.confetti-button {
-    outline: none;
-    border:none;
-    cursor: pointer;
-    width:100%;
-    height: 100%;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: 700;
-    font-family: 'Lato', sans-serif;
-    color: black;
-    text-align: center;
-    background: white;
-    transition: 0.5s;
-}
-
-.confetti-button:hover {
-    background: #e0e0e0;
-}
-.confetti-button:active {
-    background:#1da88a;
-}
-.button-wrapper {
-    position: relative;
-    width:200px;
-    height:60px;
-    margin: 0 auto;
-}
-.button-wrapper canvas {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
-
-.frame-wrapper {
-    position: relative;
-}
-
-.module {
-    width: 60vw;
-}
-
-.module h4 {
-    font-weight: 500;
-    line-height: 0px;
 }
 
 .module .project-attributes {
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 1.3vw;
 }
 
 .module .links a {
     display: inline-block;
     color: white;
-    font-size: 1.2vw;
     text-decoration: underline;
 }
 
-.module .links a:hover {
+a:hover {
     color: #dddddd;
 }
 
@@ -158,4 +116,12 @@ button {
 
 footer {
     font-size: 15px;
+}
+
+#projects {
+    scroll-behavior: smooth;
+}
+
+.code {
+    font-family: 'JetBrains Mono', monospace;
 }
