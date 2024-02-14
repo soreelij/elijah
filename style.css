@@ -1,5 +1,6 @@
 /* Font import */
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 /* Navigation Bar Styling */
 .topnav {
@@ -119,4 +120,8 @@ footer {
 
 #projects {
     scroll-behavior: smooth;
+}
+
+.code {
+    font-family: 'JetBrains Mono', monospace;
 }
